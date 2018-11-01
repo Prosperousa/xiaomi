@@ -2,7 +2,7 @@
 * @Author: Dell
 * @Date:   2018-09-03 15:13:15
 * @Last Modified by:   Dell
-* @Last Modified time: 2018-09-06 17:06:12
+* @Last Modified time: 2018-09-17 10:00:10
 */
 window.onload=function(){
     // 轮播图
@@ -71,7 +71,10 @@ window.onload=function(){
       
     }
     rightbtn.onclick=function () {
-       
+        if (!flag){
+            return;
+        }
+        flag=false;
         move();
     }
     banner.onmouseover=function () {
@@ -161,7 +164,7 @@ window.onload=function(){
 }
 
 // 图书轮播
-let oneimgs = document.querySelectorAll(".content .content-list .one .banner .master");
+    let oneimgs = document.querySelectorAll(".content .content-list .one .banner .master");
     let onedots = document.querySelectorAll(".content .content-list .one .dot li");
     let oneleftbtn=document.querySelectorAll(".content .content-list .one .leftbtn")[0];
     let onerightbtn=document.querySelectorAll(".content .content-list .one .rightbtn")[0];
@@ -448,11 +451,12 @@ let oneimgs = document.querySelectorAll(".content .content-list .one .banner .ma
     }
 
     //置顶
-     let back=document.querySelectorAll(".zd ul li")[3];
-    // console.log(back);
-    back.onclick=function(){
-        animate(document.documentElement,{scrollTop:0},600);
+     let back=document.querySelector(".zhiding");
+    back.onclick=function () {
+        animate(document.body,{scrollTop:0},500);
+        animate(document.documentElement,{scrollTop:0},500)
     }
+
 }
 
 

@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-08-02 15:15:29
 * @Last Modified by:   Dell
-* @Last Modified time: 2018-09-06 22:51:26
+* @Last Modified time: 2018-09-10 10:20:15
 */
 *{
 	margin: 0;
@@ -430,7 +430,7 @@ a{
 	left: 149px;
 	top: 79px;
 	background: #5F5750;
-}
+} 
 .tail .left li{
 	width: 75px;
 	height: 85px;
